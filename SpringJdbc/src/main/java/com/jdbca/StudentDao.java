@@ -13,20 +13,23 @@ public class StudentDao {
 		this.jdbcTemplate = jdbcTemplate;
 	}
 
-	public int saveStudent(Student s) {
+	public String saveStudent(Student s) {
 		String query = "insert into student values( " + s.getId() + ",'" + s.getName() + "','" + s.getCity() + "')";
-		return jdbcTemplate.update(query);
+		jdbcTemplate.update(query);
+		return "Save Student";
 
 	}
 
-	public int updateStudent(Student s) {
+	public String updateStudent(Student s) {
 		String query = "update student set name='" + s.getName() + "',city='" + s.getCity() + "' where id='" + s.getId()
 				+ "' ";
-		return jdbcTemplate.update(query);
+		jdbcTemplate.update(query);
+		return "Update Student";
 	}
 
-	public int deleteEmployee(Student s) {
-		String query = "delete from s where id='" + s.getId() + "' ";
-		return jdbcTemplate.update(query);
+	public String deleteStudent(Student s) {
+		String query = "delete  from student where id='" + s.getId() + "' ";
+		jdbcTemplate.update(query);
+		return "Delete Student";
 	}
 }
