@@ -1,21 +1,22 @@
 package com.autowiring;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
+@Component
 public class BeanB {
+	@Autowired
 	private BeanA beanA;
 	private String name;
 
-	public BeanB() {
-		super();
-		// TODO Auto-generated constructor stub
+	public void bbb() {
+		System.out.println(this.beanA.getName());
 	}
 
-	public BeanA getBeanA() {
-		return beanA;
-	}
-
-	public void setBeanA(BeanA beanA) {
-		this.beanA = beanA;
-	}
+//	public void setBeanA(BeanA beanA) {
+//		this.beanA = beanA;
+//	}
 
 	public String getName() {
 		return name;
@@ -25,9 +26,9 @@ public class BeanB {
 		this.name = name;
 	}
 
-	public BeanB(BeanA beanA) {
-		super();
-		this.beanA = beanA;
-	}
+//	public BeanB(BeanA beanA) {
+//		super();
+//		this.beanA = beanA;
+//	}
 
 }

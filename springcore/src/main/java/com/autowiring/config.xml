@@ -8,9 +8,9 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean class="com.autowiring.BeanA" name="beanA">
+	<!-- <bean class="com.autowiring.BeanA" name="beanA">
 		<property name="name" value="Abhishek Tiwari" />
-	</bean>
+	</bean> -->
 
 
 	<!-- <bean class="com.autowiring.BeanB" autowire="byName"> <property name="name" 
@@ -19,7 +19,7 @@
 	<!-- <bean class="com.autowiring.BeanB" autowire="byType"> <property name="name" 
 		value="Rudransh Tiwari" /> </bean> -->
 
-	<bean class="com.autowiring.BeanB" autowire="constructor">
+	<!-- <bean class="com.autowiring.BeanB" autowire="constructor">
 		<property name="name" value="Rudransh Tiwari" />
-	</bean>
+	</bean> -->
 </beans>
