@@ -19,7 +19,8 @@
 			<h2>STUDENT REGISTRATION FORM</h2>
 		</div>
 		<div>
-			<a class="btn btn-danger" href="viewstudent">View Student</a>
+			<a class="btn btn-danger" href="loginform">Login</a> <a
+				class="btn btn-danger" href="viewstudent">View Student</a>
 		</div>
 		<form class="row g-3 needs-validation" novalidate action="handler"
 			method="post">
@@ -54,7 +55,7 @@
 				<label for="validationCustom03" class="form-label">Email</label> <input
 					type="email" class="form-control border border-1 border-dark"
 					name="email" id="validationCustom03" required>
-				<div class="invalid-feedback">Please provide a valid city.</div>
+				<div class="invalid-feedback">Please provide a valid Email.</div>
 			</div>
 			<div class="col-md-3">
 				<label for="validationCustom04" class="form-label">State</label> <select
@@ -100,12 +101,21 @@
 					name="birthdate" id="validationCustom05" required>
 				<div class="invalid-feedback">Please provide a Birth Date.</div>
 			</div>
+			<div class="col-md-3">
+				<label for="validationCustom05" class="form-label">Password</label>
+				<input type="password"
+					class="form-control  border border-1 border-dark" name="password"
+					id="validationCustom05" required>
+				<div class="invalid-feedback">Please provide a valid Password.</div>
+			</div>
 
 			<div class="col-12">
 				<button class="btn btn-primary" type="submit">Submit form</button>
 			</div>
 		</form>
 	</div>
+
+
 </body>
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

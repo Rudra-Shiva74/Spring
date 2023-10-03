@@ -18,4 +18,6 @@ public interface Studentinterface {
 
 	public void Update(Student student);
 
+	public Student getoneLogin(Student student);
+
 }

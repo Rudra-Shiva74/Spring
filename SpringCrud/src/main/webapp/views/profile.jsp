@@ -21,7 +21,7 @@
 			<h2>STUDENT UPDATE FORM</h2>
 		</div>
 		<div>
-			<a class="btn btn-danger" href="home">HOME</a>
+			<button class="btn btn-danger">PROFILE</button>
 		</div>
 		<form class="row g-3 needs-validation" novalidate action="update"
 			method="post">

@@ -11,9 +11,11 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 
 import com.app.entity.User;
 import com.app.service.UserService;
+import com.oracle.wls.shaded.org.apache.xalan.lib.Redirect;
 
 import jakarta.servlet.http.HttpServletRequest;
 
@@ -83,5 +85,12 @@ public class Controll {
 	public String handler(@ModelAttribute User user) {
 		this.userService.createUser(user);
 		return "about";
+	}
+
+	@RequestMapping("/one")
+	public RedirectView one() {
+		RedirectView redirectView = new RedirectView();
+		redirectView.setUrl("http://www.google.com");
+		return redirectView;
 	}
 }

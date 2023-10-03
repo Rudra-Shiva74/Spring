@@ -18,6 +18,7 @@ public class Student {
 	private String email;
 	private String state;
 	private String birthdate;
+	private String password;
 
 	public int getId() {
 		return id;
@@ -75,7 +76,16 @@ public class Student {
 		this.birthdate = birthdate;
 	}
 
-	public Student(int id, String name, String regno, String gender, String email, String state, String birthdate) {
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public Student(int id, String name, String regno, String gender, String email, String state, String birthdate,
+			String password) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -84,6 +94,7 @@ public class Student {
 		this.email = email;
 		this.state = state;
 		this.birthdate = birthdate;
+		this.password = password;
 	}
 
 	public Student() {
@@ -94,7 +105,7 @@ public class Student {
 	@Override
 	public String toString() {
 		return "Student [id=" + id + ", name=" + name + ", regno=" + regno + ", gender=" + gender + ", email=" + email
-				+ ", state=" + state + ", birthdate=" + birthdate + "]";
+				+ ", state=" + state + ", birthdate=" + birthdate + ", password=" + password + "]";
 	}
 
 }

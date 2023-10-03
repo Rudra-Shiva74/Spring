@@ -47,7 +47,6 @@
 						<td>${s.email}</td>
 						<td>${s.state}</td>
 						<td>${s.birthdate}</td>
-						<td><a href="edit?id=${s.id }">Edit</a></td>
 						<td><a href="delete?id=${s.id }">Delete</a></td>
 					</tr>
 				</c:forEach>

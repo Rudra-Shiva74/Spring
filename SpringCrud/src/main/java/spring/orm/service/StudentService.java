@@ -11,7 +11,7 @@ import spring.orm.entity.Student;
 
 @Service
 public class StudentService {
-	@Autowired
+	@Autowired  
 	private Studentinterface studentinterface;
 
 	public int createStudent(Student st) {
@@ -35,5 +35,10 @@ public class StudentService {
 	public int update(Student student) {
 		this.studentinterface.Update(student);
 		return student.getId();
+	}
+
+	public Student getoneLogin(Student student) {
+		Student st = studentinterface.getoneLogin(student);
+		return st;
 	}
 }

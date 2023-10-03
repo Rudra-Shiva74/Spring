@@ -30,8 +30,12 @@ public class StudentController {
 
 	@RequestMapping(path = "/handler", method = RequestMethod.POST)
 	public String handler(Student student) {
-		studentService.createStudent(student);
-		return "redirect:/viewstudent";
+		try {
+			studentService.createStudent(student);
+			return "redirect:/loginform";
+		} catch (Exception e) {
+			return "redirect:/";
+		}
 	}
 
 	@GetMapping("/viewstudent")
@@ -63,7 +67,20 @@ public class StudentController {
 	public String update(Student student) {
 		System.out.println(student.toString());
 		this.studentService.update(student);
-		return "redirect:/viewstudent";
+		return "profile";
 	}
 
+	@RequestMapping("/loginform")
+	public String loginpage() {
+		return "Login";
+	}
+
+	@RequestMapping("/Login")
+	public ModelAndView Login(Student student) {
+		Student st = this.studentService.getoneLogin(student);
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("student", st);
+		mv.setViewName("profile");
+		return mv;
+	}
 }

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd 
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context.xsd 
+	http://www.springframework.org/schema/util 
+	http://www.springframework.org/schema/util/spring-util.xsd 
+	http://www.springframework.org/schema/mvc 
+	http://www.springframework.org/schema/mvc/spring-mvc.xsd 
+	https://www.springframework.org/schema/beans 
+	https://www.springframework.org/schema/beans/spring-beans.xsd 
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+
+	<context:component-scan base-package="com.hello" />
+	<!-- <tx:annotation-driven /> <bean name="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
+		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver" /> <property 
+		name="url" value="jdbc:mysql://localhost:3306/youtube" /> <property name="username" 
+		value="root" /> <property name="password" value="ShivaRudra@7488" /> </bean> 
+		<bean class="org.springframework.orm.hibernate5.LocalSessionFactoryBean" 
+		name="localsession"> <property name="dataSource" ref="ds"></property> <property 
+		name="hibernateProperties"> <props> <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop> 
+		<prop key="hibernate.show_sql">true</prop> <prop key="hibernate.hbm2ddl.auto">update</prop> 
+		</props> </property> <property name="annotatedClasses"> <list> <value>spring.orm.entity.Student</value> 
+		</list> </property> </bean> <bean class=" org.springframework.orm.hibernate5.HibernateTemplate" 
+		name="hibernateTemplate"> <property name="sessionFactory" ref="localsession"></property> 
+		</bean> <bean class=" org.springframework.orm.hibernate5.HibernateTransactionManager" 
+		name="transactionManager"> <property name="sessionFactory" ref="localsession"></property> 
+		</bean> <beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"> 
+		<beans:property name="prefix" value="/views/" /> <beans:property name="suffix" 
+		value=".jsp" /> </beans:bean> -->
+</beans> 

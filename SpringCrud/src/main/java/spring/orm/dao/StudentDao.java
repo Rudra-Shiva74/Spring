@@ -13,12 +13,12 @@ import spring.orm.entity.Student;
 @Component
 public class StudentDao implements Studentinterface {
 
-	@Autowired
+	@Autowired  
 	private HibernateTemplate hibernateTemplate;
 
 	@Transactional
 	public int insert(Student st) {
-		Integer i = (Integer) this.hibernateTemplate.save(st);
+		int i = (Integer) this.hibernateTemplate.save(st);
 		return i;
 	}
 
@@ -38,6 +38,17 @@ public class StudentDao implements Studentinterface {
 	public Student getStudent(int i) {
 		Student st = this.hibernateTemplate.get(Student.class, i);
 		return st;
+	}
+
+	public Student getoneLogin(Student student) {
+		List<Student> st = this.hibernateTemplate.loadAll(Student.class);
+		for (Student s : st) {
+			if ((s.getRegno().equals(student.getRegno()) && s.getPassword().equals(student.getPassword()))) {
+				System.out.println(s);
+				return s;
+			}
+		}
+		return null;
 	}
 
 	@Transactional

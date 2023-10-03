@@ -17,4 +17,5 @@ public class ContactController {
 		model.addAttribute("tittle2", "This is Abhishek Tiwari");
 		model.addAttribute("tittle", "Hello Everyone my name is Abhishek Tiwari");
 	}
+	
 }
